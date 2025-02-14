@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools >= 61.0.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "polysolve"
+authors = [{name = "Alex Louat", email = "alex.louat@gmail.com"}]
+requires-python = ">= 3.8"
+readme = "README.md"
+description = "DO you mwant to know the roots of a 2 of 3 order polynome? Come here, we have everthing for that!"
+license = {text = "BSD-3-Clause"}
+
+keywords = []
+dependencies = ["numpy"]
+classifiers = []
+dynamic = ["version"]
+
+[project.urls]
+Homepage="https://github.com/bouler/polysolve"
+Repository="https://github.com/bouler/polysolve.git"
+
+[tool.setuptools.dynamic]
+version = {attr = "polysolve.__version__"}
