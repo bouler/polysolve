@@ -26,6 +26,19 @@ def poly2(a: float,
    -------
    tuple[float, float]
        Positive and negative roots of quadratic.
+
+   Examples
+   --------
+   >>> poly2(1., 0., 0.)
+   (0.0, -0.0)
+   >>> poly2(3., 0., -1.)
+   (0.5773502691896257, -0.5773502691896257)Examples
+   --------
+   >>> poly2(1., 0., 0.)
+   (0.0, -0.0)
+   >>> quadratic(3., 0., -1.)
+   (0.5773502691896257, -0.5773502691896257)
+      
     """
     det = b**2 - (4*a*c)
 
@@ -35,7 +48,7 @@ def poly2(a: float,
 def poly3(a: float,
           b: float,
           c: float,
-          d: float) -> tuple[float, float, float]:      c: float) -> tuple[float, float]:
+          d: float) -> tuple[float, float, float]:
     """
     Solves the roots of a cubic equation.
 

@@ -21,3 +21,8 @@ Repository="https://github.com/bouler/polysolve.git"
 
 [tool.setuptools.dynamic]
 version = {attr = "polysolve.__version__"}
+
+[project.optional-dependencies]
+docs = ["sphinx",
+	"sphinx_autodoc_typehints",
+	"sphinx_rtd_theme"]
