@@ -1,5 +1,5 @@
-import numpy as np
 from __future__ import annotations
+import numpy as np
 
 
 CBRT_UNITY_IM = np.sqrt(3)/2 * 1j
@@ -27,3 +27,12 @@ def poly3(a: float,
     x2 = -(s + t)/2 - (b/3*a) + CBRT_UNITY_IM * (s - t)
     x3 = -(s + t)/2 - (b/3*a) - CBRT_UNITY_IM * (s - t)
     return x1, x2, x3
+
+def poly(order: int,
+         vec: tuple) -> tuple:
+    if order < 2 or order > 3:
+        raise Exception("I don't handle this polynome order")
+    if order == 2:
+        return poly2(*vec)
+    if order == 3:
+        return poly3(*vec)
